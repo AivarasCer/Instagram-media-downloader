@@ -1,10 +1,13 @@
 import instaloader
 
 
-def download_photos(username):
+def download_photos(username, login_user, login_pass):
     loader = instaloader.Instaloader()
 
     try:
+        loader.login(login_user, login_pass)
+        print(f'Logged in as {login_user}')
+
         loader.download_profile(username, profile_pic_only=False)
         print(f'Photos from {username} have been downloaded successfully.')
     except instaloader.exceptions.ProfileNotExistsException:
@@ -19,4 +22,6 @@ def download_photos(username):
 
 if __name__ == "__main__":
     user_name = input("Enter the Instagram username: ")
-    download_photos(user_name)
+    user_login = input("Enter your Instagram username: ")
+    pass_login = input("Enter your Instagram password: ")
+    download_photos(user_name, user_login, pass_login)
