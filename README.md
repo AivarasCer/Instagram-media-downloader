@@ -1,10 +1,10 @@
-# Instagram Photo Downloader
+# Instagram Media Downloader
 
-A Python script to download photos from a specific Instagram account using the `instaloader` library.
+A Python script to download media from a specific Instagram account using the `instaloader` library.
 
 ## Features
 
-- Download all photos from a public Instagram profile
+- Download all media from a public Instagram profile
 - Handle various exceptions such as non-existent profiles, private profiles, and login requirements
 
 ## Installation
